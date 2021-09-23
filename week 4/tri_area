@@ -1,0 +1,3 @@
+function n = tri_area(b,h)
+n = 0.5 * b * h;
+end
