@@ -1,0 +1,6 @@
+function [w, x, y, z] = corners(M)
+    w = M(1, 1);
+    x = M(1, end);
+    y = M(end, 1);
+    z = M(end, end)
+end
