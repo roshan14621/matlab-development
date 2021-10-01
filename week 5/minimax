@@ -1,0 +1,6 @@
+function [diff, total_diff] = minimax(M)
+max_rows = max(M');
+min_rows = min(M');
+diff = max_rows - min_rows;
+total_diff = max(max_rows) - min(min_rows);
+end
