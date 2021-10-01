@@ -1,0 +1,5 @@
+function R = trio(n,m)
+R = ones(3 * n, m);
+R(n + 1 : 2 * n, :) = 2 * ones(n, m);
+R(2 * n + 1 : end, :) = 3 * ones(n, m);
+end
