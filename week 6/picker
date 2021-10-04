@@ -1,0 +1,7 @@
+function M = picker(condition, in1, in2)
+    if condition
+        M = in1;
+    else
+        M = in2;
+    end
+end
