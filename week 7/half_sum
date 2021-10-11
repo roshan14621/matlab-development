@@ -1,0 +1,9 @@
+function s = halfsum(M)
+[a, b] = size(M);
+s = 0;
+for row = 1:a
+    for column = row:b
+        s = s + M(row, column);
+    end
+end
+end
