@@ -1,0 +1,10 @@
+function coded = caesar(seq, shift)
+seq = double(seq);
+seq = seq + shift;
+coded = char(loop(32, 126, seq));
+end
+
+function val = loop(start, stop, val)
+r = stop - start + 1;
+val = mod(val - start + r, r) + start;
+end
