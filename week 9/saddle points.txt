@@ -1,0 +1,20 @@
+function indices = saddle(M)
+    indices = zeros(0, 2);
+    [r, c] = size(M);
+    for r = 1:r
+        for c = 1 : c
+            point = M(r, c);
+            if isGreaterThan(point, M(r, :)) && isSmallerThan(point, M(:, c))
+                indices(end + 1, :) = [r, c]; %#ok<AGROW>
+            end
+        end
+    end
+end
+
+function predicate = isGreaterThan(point, vector) 
+    predicate = sum(point >= vector) == length(vector);
+end
+
+function predicate = isSmallerThan(point, vector)
+    predicate = sum(point <= vector) == length(vector);
+end
